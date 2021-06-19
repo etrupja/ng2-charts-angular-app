@@ -1,1 +1,13 @@
-<p>pie-doughnut-chart works!</p>
+<div class="chart-wrapper">
+    <canvas baseChart
+        [data]="chartData"
+        [labels]="chartLabels"
+        [chartType]="chartType">
+    </canvas>
+</div>
+
+<div class="text-center">
+    <button class="btn btn-light" (click)="switchChartType($event)">
+        Switch to {{chartType == 'pie' ? 'Doughnut' : 'Pie'}}
+    </button>
+</div>
