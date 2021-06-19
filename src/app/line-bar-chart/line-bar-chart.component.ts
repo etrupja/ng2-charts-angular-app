@@ -20,6 +20,14 @@ export class LineBarChartComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  switchChartType(event: any){
+    if(this.chartType == 'bar'){
+      this.chartType = 'line';
+    } else {
+      this.chartType = 'bar';
+    }
+  }
   
 
 }

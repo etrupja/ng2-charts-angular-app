@@ -5,3 +5,9 @@
         [chartType]="chartType">
     </canvas>
 </div>
+
+<div class="text-center">
+<button class="btn btn-light" (click)="switchChartType($event)">
+    Switch to {{chartType == 'bar' ? 'Line' : 'Bar'}}
+</button>
+</div>
