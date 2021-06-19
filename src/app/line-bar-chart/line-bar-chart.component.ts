@@ -37,6 +37,15 @@ export class LineBarChartComponent implements OnInit {
     }
   }
 
+  colors = ['red', 'green', 'blue', 'yellow', 'purple'];
+  colorIndex = 0;
+  randomColor(event: any){
+    this.chartColors[1].backgroundColor = this.colors[this.colorIndex++];
+    if(this.colorIndex >= this.colors.length){
+      this.colorIndex = 0;
+    }
+  }
+
   onChartClick(event: any){
     if(event.active.length > 0){
       const chart = event.active[0]._chart;
