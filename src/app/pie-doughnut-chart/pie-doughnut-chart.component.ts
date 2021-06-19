@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartType } from 'chart.js';
-import { Label, SingleDataSet } from 'ng2-charts';
+import { Label, MultiDataSet, SingleDataSet } from 'ng2-charts';
 
 @Component({
   selector: 'app-pie-doughnut-chart',
@@ -11,7 +11,12 @@ export class PieDoughnutChartComponent implements OnInit {
 
   chartType:ChartType = "pie";
   chartLabels: Label[] = ['YES','NO', 'N/A']
-  chartData: SingleDataSet = [80, 15, 5];
+  // chartData: SingleDataSet = [80, 15, 5];
+  chartData: MultiDataSet = [
+    [350, 120, 100],
+    [50, 150, 120],
+    [250, 130, 70]
+  ]
 
   constructor() { }
 
